@@ -45,6 +45,8 @@ h1, h2, h3 { letter-spacing: -0.03em; line-height: 1.05; font-weight: 800; margi
   background: #ddd;
 }
 
+.ph img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
 .ph-label {
   font-size: 0.7rem;
   letter-spacing: 0.2em;
@@ -201,7 +203,15 @@ h1, h2, h3 { letter-spacing: -0.03em; line-height: 1.05; font-weight: 800; margi
   border-top: 1px solid var(--border);
 }
 
-.split-media { min-height: 420px; }
+.split-media { min-height: 420px; overflow: hidden; }
+.split-media img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+.split-media.has-photo {
+  align-self: center;
+  aspect-ratio: 3 / 2;
+  max-height: 520px;
+}
+.split-media.has-photo img { object-position: center 30%; }
 
 .split-text {
   display: flex;
