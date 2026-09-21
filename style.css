@@ -85,8 +85,8 @@ h1, h2, h3 { letter-spacing: -0.03em; line-height: 1.05; font-weight: 800; margi
 }
 
 .social {
-  width: 62px;
-  height: 62px;
+  width: 82px;
+  height: 82px;
   border-radius: 50%;
   background: var(--accent);
   display: grid;
@@ -97,8 +97,8 @@ h1, h2, h3 { letter-spacing: -0.03em; line-height: 1.05; font-weight: 800; margi
 .social:hover { transform: scale(1.06); }
 
 .social svg {
-  width: 28px;
-  height: 28px;
+  width: 64px;
+  height: 64px;
   fill: none;
   stroke: #fff;
   stroke-width: 2.2;
@@ -110,22 +110,74 @@ h1, h2, h3 { letter-spacing: -0.03em; line-height: 1.05; font-weight: 800; margi
 .hero {
   text-align: center;
   padding: 140px 24px 60px;
+  background: #0a0a0a;
 }
 
 .hero h1 {
-  font-size: clamp(2.8rem, 8vw, 6rem);
+  font-size: clamp(5rem, 15vw, 12rem);
   max-width: 900px;
   margin: 0 auto 70px;
+  font-weight: 900;
+  text-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  letter-spacing: -0.05em;
+  color: #FFD700;
+  font-family: "Playfair Display", Georgia, serif;
 }
 
 .hero-copy {
   max-width: 1020px;
   margin: 0 auto;
   font-size: 1.25rem;
-  color: var(--muted);
+  color: #e0e0e0;
 }
 
 .hero-copy p { margin: 0 0 22px; }
+
+/* Upcoming Shows */
+.upcoming-shows {
+  max-width: 1480px;
+  margin: 0 auto;
+  padding: 100px 5vw;
+  border-top: 1px solid var(--border);
+}
+
+.upcoming-shows h2 {
+  font-size: clamp(2.8rem, 6vw, 5.2rem);
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+.shows-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+}
+
+.show-card {
+  background: #f1f1f1;
+  padding: 30px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.show-date {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: var(--accent);
+}
+
+.show-venue {
+  font-size: 1.5rem;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.show-city {
+  font-size: 1.1rem;
+  color: var(--muted);
+  margin-bottom: 20px;
+}
 
 /* Clips */
 .clips {
@@ -400,7 +452,7 @@ footer {
 
 .footer-social { border: 0; padding-bottom: 20px; }
 
-footer p { font-size: 1.3rem; margin: 0; }
+footer p { font-size: 1.5rem; margin: 0; }
 
 @media (max-width: 860px) {
   .split { grid-template-columns: 1fr; min-height: auto; }
